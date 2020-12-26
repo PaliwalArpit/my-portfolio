@@ -1,72 +1,51 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-export default class Contact extends React.Component {
-	render() {
-		return (
-			<div id="my-contact" className="container text-center my-5">
-				<h1 id="contact" className={"mb-3 " + this.props.fadeInLeft}>
-					Contact
-				</h1>
-				<form
-					className={this.props.shake}
-				//	action="https://formspree.io/example@email.com"
-					method="POST">
-					<div className="form-group">
-						<div className="row">
-							<div className="col-12 col-sm-12 col-md-6 mx-auto">
-								<input
-									type="text"
-									name="name"
-									className="form-control form-control-lg"
-									id="name"
-									placeholder="Name"
-								/>
-							</div>
-						</div>
-					</div>
-					<div className="form-group hidden">
-						<div className="row">
-							<div className="col-12 col-sm-12 col-md-6 mx-auto">
-								<input
-									type="email"
-									name="_replyto"
-									className="form-control form-control-lg"
-									id="exampleFormControlInput1"
-									placeholder="Your email"
-								/>
-							</div>
-						</div>
-					</div>
-					<div className="form-group hiddenRight">
-						<div className="row">
-							<div className="col-12 col-sm-12 col-md-6 mx-auto">
-								<textarea
-									name="message"
-									className="form-control form-control-lg"
-									id="exampleFormControlTextarea1"
-									rows="3"
-									placeholder="Write your message..."
-								/>
-							</div>
-						</div>
-					</div>
-					<div className="row text-md-right text-sm-center">
-						<div className="col-12 col-sm-12 col-md-6 mx-auto">
-							<button
-								type="submit"
-								className="btn btn-primary mb-2 hidden">
-								Submit
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		);
-	}
+const useStyles = makeStyles({
+	root: {
+	  minWidth: 300,
+	  textAlign:"center",
+	  fontWeight:"bold"
+	},
+	bullet: {
+	  display: 'inline-block',
+	  margin: '0 2px',
+	  transform: 'scale(1)',
+	},
+	title: {
+	  fontSize: 20,
+	},
+	pos: {
+	  marginBottom: 20,
+	},
+  });
+			
+export default function SimpleCard() {
+  const classes = useStyles();
+
+  return (
+	<Card className={classes.root}>
+	<CardContent>
+	  <Typography
+		className={classes.title}
+		color="textSecondary"
+		gutterBottom
+	  ></Typography>
+	  <Typography variant="h5" component="h2">
+		Contact Details:
+	  </Typography>
+	  <Typography variant="body2" component="p">
+		<br />
+		{"Contact number : +091 9890764723"}
+		<br />
+		{"Email id : arpitpaliwal14@gmail.com"}
+	  </Typography>
+	</CardContent>
+  </Card>
+  );
 }
-
-Contact.propTypes = {
-	fadeInLeft: PropTypes.string,
-	shake: PropTypes.string
-};

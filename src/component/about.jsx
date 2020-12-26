@@ -104,16 +104,6 @@ export default class About extends React.Component {
 						</div>
 						<div className="progress mb-3">
 							<div
-								className="progress-bar fill-60-bar"
-								role="progressbar"
-								style={{ width: 60 + "%" }}
-								aria-valuemin="0"
-								aria-valuemax="100">
-								PHP
-							</div>
-						</div>
-						<div className="progress mb-3">
-							<div
 								className="progress-bar fill-80-bar"
 								role="progressbar"
 								style={{ width: 80 + "%" }}
@@ -134,32 +124,12 @@ export default class About extends React.Component {
 						</div>
 						<div className="progress mb-3">
 							<div
-								className="progress-bar fill-60-bar"
-								role="progressbar"
-								style={{ width: 60 + "%" }}
-								aria-valuemin="0"
-								aria-valuemax="100">
-								SASS
-							</div>
-						</div>
-						<div className="progress mb-3">
-							<div
 								className="progress-bar fill-80-bar"
 								role="progressbar"
 								style={{ width: 80 + "%" }}
 								aria-valuemin="0"
 								aria-valuemax="100">
 								VanillaJS
-							</div>
-						</div>
-						<div className="progress mb-3">
-							<div
-								className="progress-bar fill-60-bar"
-								role="progressbar"
-								style={{ width: 60 + "%" }}
-								aria-valuemin="0"
-								aria-valuemax="100">
-								JQuery
 							</div>
 						</div>
 					</div>
